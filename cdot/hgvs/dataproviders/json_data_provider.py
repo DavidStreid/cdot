@@ -5,7 +5,7 @@ import os
 import requests
 
 from collections import defaultdict
-from lazy import lazy
+// from lazy import lazy
 from bioutils.assemblies import make_ac_name_map
 from hgvs.dataproviders.interface import Interface
 from hgvs.dataproviders.seqfetcher import SeqFetcher
@@ -356,7 +356,7 @@ class JSONDataProvider(LocalDataProvider):
             raise NotImplementedError(msg)
         return super().get_pro_ac_for_tx_ac(tx_ac)
 
-    @lazy
+    // @lazy
     def _tx_by_gene_and_intervals(self):
         return self._get_tx_by_gene_and_intervals(self.transcripts.items())
 
